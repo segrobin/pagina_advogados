@@ -8,15 +8,46 @@
     <script src="Js/script.js" defer></script>
 </head>
 <body>
+    <header>
+        <div id="logo">
+            <h1>Pearson Hardman</h1>
+        </div>
+        <!--menu que redireciona as páginas-->
+        <div id="menu">
+            <h3><a href="index.html">HOME</a></h3>
+            <h3><a href="servicos.html">SERVIÇOS</a></h3>
+            <h3><a href="sobre.html">SOBRE</a></h3>
+            <h3><a href="time.html">TIME</a></h3>
+            <h3><a href="contato.html">CONTATO</a></h3>
+        </div>
+    </header>
     <div id="contato_pagina">
         <!-- Parte da esquerda-->
         <div id="esquerda_contatos">
-            <input type="text" name="nome_contato" id="nome_contato_pagina" class="input-custom" placeholder="Seu nome">
-            <input type="email" name="email_contato" id="email_contato_pagina" class="input-custom" placeholder="Seu E-mail">
-            <input type="tel" name="telefone_contato" id="telefone_contato_pagina" class="input-custom" placeholder="Seu telefone">
-            <input type="text" name="cidade_contato" id="cidade_contato_pagina" class="input-custom" placeholder="Sua cidade">
-            <input type="text" name="mensagem_contato" id="mensagem_contato_pagina" class="input-custom" placeholder="Sua mensagem">
-            <button type="submit" id="button_contato_pagina_form">Enviar</button>
+            <form id="form_contato">
+                <h2>Deixe seu contato, nós ligamos para você!</h2>
+                <div>
+                  <label for="nome_contato">Seu nome:</label>
+                  <input type="text" name="nome_contato" id="nome_contato" class="input-custom" required>
+                </div>
+                <div>
+                  <label for="email_contato">Seu E-mail:</label>
+                  <input type="email" name="email_contato" id="email_contato" class="input-custom" required>
+                </div>
+                <div>
+                  <label for="telefone_contato">Seu telefone:</label>
+                  <input type="tel" name="telefone_contato" id="telefone_contato" class="input-custom" required>
+                </div>
+                <div>
+                  <label for="cidade_contato">Sua cidade:</label>
+                  <input type="text" name="cidade_contato" id="cidade_contato" class="input-custom" required>
+                </div>
+                <br>
+
+                <br/>
+                <div style="text-align: center;">
+                    <button type="submit" id="button_contato_form">Enviar</button>
+                </div>
         </div>
         <!-- Parte da esquerda-->
         <div id="direita_contatos">
@@ -31,7 +62,6 @@
                 <button onclick="window.location.href='trabalhe.html'">Trabalhe conosco</button>
                
             </div>
-            <div class="retorno_principal" style="position: absolute; right: 0; bottom: 0;" ><a href="index.html">PÁGINA INICIAL</a></div>
         </div>
     </div>
     <script src="script.js"></script>

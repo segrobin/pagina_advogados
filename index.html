@@ -45,12 +45,28 @@
     </div>
     <!--Formulário da Área de contatos-->
     <div id="area_contatos">
-        <h2>Deixe seu contato, nós ligamos para você!</h2>
-        <input type="text" name="nome_contato" id="nome_contato" class="input-custom" placeholder="Seu nome">
-        <input type="email" name="email_contato" id="email_contato" class="input-custom" placeholder="Seu E-mail">
-        <input type="tel" name="telefone_contato" id="telefone_contato" class="input-custom" placeholder="Seu telefone">
-        <input type="text" name="cidade_contato" id="cidade_contato" class="input-custom" placeholder="Sua cidade">
-        <button type="submit" id="button_contato_form">Enviar</button>
+        <form id="form_contato">
+            <h2>Deixe seu contato, nós ligamos para você!</h2>
+            <div>
+              <label for="nome_contato">Seu nome:</label>
+              <input type="text" name="nome_contato" id="nome_contato" class="input-custom" required>
+            </div>
+            <div>
+              <label for="email_contato">Seu E-mail:</label>
+              <input type="email" name="email_contato" id="email_contato" class="input-custom" required>
+            </div>
+            <div>
+              <label for="telefone_contato">Seu telefone:</label>
+              <input type="tel" name="telefone_contato" id="telefone_contato" class="input-custom" required>
+            </div>
+            <div>
+              <label for="cidade_contato">Sua cidade:</label>
+              <input type="text" name="cidade_contato" id="cidade_contato" class="input-custom" required>
+            </div>
+            <br>
+            <br/>
+            <button type="submit" id="button_contato_form">Enviar</button>
+          </form>
     </div>
     <!--Área das últimas notícias publicadas-->
     <div id="ultimas_noticias">

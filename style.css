@@ -482,9 +482,12 @@ background-color: #ff0000;
 }
 
 #maps {
-    height: 300px;
-    width: 500px;
-    background-color: #ffffff;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+#button_trabalheconosco_contato {
+    margin-left: 10px;
 }
 
 #bottom_contato {

@@ -1,0 +1,449 @@
+body {
+    color: #ffffff;
+    font-family: Consolas;
+    background-image: url('Imagens/christian-wiediger-RYWEyXopmM4-unsplash_1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+/* Logo da empresa página index */
+
+#logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 75px;
+    width: 300px;
+    background-color: #f00;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    border-bottom-right-radius: 5%;
+}
+
+/* Menu no topo à esquerda da página index */
+
+#menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 30px;
+    display: flex;
+    gap: 55px;
+}
+
+/* Estilização dos links */
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Mensagem de apresentação da empresa */
+
+#apresentacao {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    height: 400px;
+    width: 550px;
+    font-size: 40px;
+}
+
+/* Descrição da apresentação */
+
+#descricao_apr {
+    font-size: 20px;
+}
+
+/* Área de contato da empresa */
+
+#box_contato {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+.contato {
+    height: 180px;
+    width: 330px;
+    border: 5px solid #f00;
+    position: relative;
+}
+
+.button_contato {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+}
+
+/* Estilização de todos os botões */
+
+button {
+    font-family: Consolas;
+    font-size: 20px;
+    font-style: italic;
+    color: #ffffff;
+    width: 200px;
+    height: 70px;
+    background-color: rgb(7, 7, 7);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  button:hover {
+    background-color: #d10f0f;
+  }
+  
+  button:active {
+    background-color: #cc0000;
+  }
+
+/* Área de contato dos clientes (Formulário) */
+
+#area_contatos {
+    display: grid;
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+/* Classe input, não todos os inputs */
+
+.input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+#button_contato_form {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Área de últimas notícias */
+
+#ultimas_noticias {
+    width: 500px;
+    height: 200px;
+    display: grid;
+    justify-content: center;
+    margin-bottom: 100px;
+    border-radius: 5%;
+    border: 5px solid rgb(255, 3, 3);
+}
+
+/* Rodapé */
+
+footer {
+    background-color: rgb(34, 34, 34);
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+#whatsapp_rodape {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#button_wsp_rodape {
+    display: flex;
+    justify-content: center;
+}
+
+/* Link para página de envio de currículo */
+
+#curriculo {
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    width: fit-content;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+  
+#curriculo:hover {
+background-color: #ff0000;
+}
+
+#contato_rodape {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    background-color: #333333;
+}
+
+#copyright {
+    display: flex;
+    justify-content: center;
+    background-color: #1a1a1a;
+}
+
+/* Página trabalhe.html */
+
+#curriculo_form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.input-custom {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 60px;
+    font-size: 20px;
+}
+
+#title_curriculo_form {
+    text-align: center;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+#anexo_curriculo  {
+    margin-top: 0;
+    color: #080808;
+    margin-bottom: 10px;
+}
+#anexo_curriculo {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#anexo_curriculo p {
+    margin-top: 0;
+    color: #080808;
+    margin-bottom: 10px;
+}
+  
+#trabalhe_conosco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh; /* Define uma altura para a div, se necessário */
+}
+
+#final_curriculo {
+    text-align: center;
+}
+#button_curriculo button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #080808;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#button_curriculo button:hover {
+    background-color: #fc0404;
+}
+
+/* Classe do botão de voltar a index.html */
+
+.retorno_principal {
+    margin-top: 100px;
+    width: fit-content;
+  }
+
+  .retorno_principal button {
+    font-family: Consolas;
+    font-style: italic;
+    font-size: 20px;
+    color: #ffffff;
+    width: 200px;
+    height: 70px;
+    background-color: #f00;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  .retorno_principal button:hover {
+    background-color: #ff5555;
+  }
+
+  .retorno_principal button:active {
+    background-color: #cc0000;
+  }
+  
+  #voltar_inicio_curriculo {
+    margin-top: 0;
+    height: 30px;
+    background-color: #808080;
+  
+  }
+/* Página servicos.html */
+
+/* Página sobre.html */
+
+/* Parte da esquerda de sobre.html */
+
+#info_sobre {
+    width: 600px;
+    height: 695px;
+    background-color: #f00;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+/* uma div para alinhar todos os elementos juntos */
+
+#info_sobre_interno {
+    margin-left: 20px;
+}
+
+#topo_info_sobre {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+#title_info_sobre {
+    margin-bottom: 100px;
+}
+
+#qualidade_1_info_sobre {
+    margin-bottom: 50px;
+}
+
+/* Parte da direita de sobre.html */
+
+#stats_sobre {
+    position: absolute;
+    right: 0;
+    margin-right: 100px;
+    margin-top: 150px;
+}
+
+#topo_stats_sobre {
+    display: flex;
+    gap: 27px;
+    text-align: center;
+}
+
+#bottom_sobre {
+    display: flex;
+    gap: 40px;
+    text-align: center;
+}
+
+#linha_horizontal {
+    width: 450px;
+    height: 5px;
+    background-color: #ff0000;
+}
+
+#linha_vertical_topo {
+    width: 5px;
+    height: 200px;
+    background-color: #ff0000;
+}
+
+#linha_vertical_bottom {
+    width: 5px;
+    height: 200px;
+    background-color: #ff0000;
+}
+
+#voltar_inicio_sobre {
+    position: absolute;
+    right: 0;
+}
+
+/* Página time.html */
+
+#title_time {
+    text-align: center;
+    color: rgb(8, 8, 8);
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 5px solid rgb(250, 0, 0);
+}
+
+#advogados_time {
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 800px; /* Adjust the max-width to your preference */
+}
+
+.advogado {
+    border: 5px solid rgb(2, 2, 2);
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+/* pagina tima_advogado1.html */
+
+#topo_time_advogado1 {
+    display: flex;
+    gap: 50px;
+}
+
+/* página contato.html */
+
+#contato_pagina {
+    display: flex;
+    gap: 200px;
+}
+
+#esquerda_contatos {
+    display: grid;
+    justify-content: flex-start;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+#mensagem_contato_pagina {
+    max-width: 500px;
+    word-break: break-all;
+}
+
+#direita_contatos {
+    justify-content: flex-end;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+#maps {
+    height: 300px;
+    width: 500px;
+    background-color: #ffffff;
+}
+
+#bottom_contato {
+    display: grid;
+    text-align: center;
+    margin-right: 280px;
+    position: absolute;
+    right: 0;
+}

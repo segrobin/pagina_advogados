@@ -331,15 +331,10 @@ background-color: #ff0000;
 #info_sobre {
     width: 600px;
     height: 695px;
-    color: #000;
-    margin-top: 100px;
-    background-color: rgb(247, 243, 243);
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
-    border-top: 5px solid red;
-    border-right: 5px solid red;
 }
 
 /* uma div para alinhar todos os elementos juntos */
@@ -349,17 +344,9 @@ background-color: #ff0000;
 }
 
 #topo_info_sobre {
-    width: 94%;
-    padding: 20px;
-    text-align: center;
-    background-color: #f70808;
-    color: #fff;
-    border-bottom: 5px solid rgb(7, 7, 7);
-    margin-bottom: 30px;
-    position: absolute;
-    top:0;
-    left: 0;
-    right: 0;
+    margin-top: 120px;
+    margin-bottom: 20px;
+
 }
 
 #topo_info_sobre h3 {
@@ -370,7 +357,7 @@ background-color: #ff0000;
 
 #title_info_sobre {
     margin-bottom: 40px;
-    margin-top: 150px
+    margin-top: 30px
 }
 
 #qualidade_1_info_sobre {
@@ -496,6 +483,9 @@ background-color: #ff0000;
     margin-right: 280px;
     position: absolute;
     right: 0;
+}
+#button_trabalheconosco_contato {
+    margin-left: 10px;
 }
 h4 {
     font-size: 28px;

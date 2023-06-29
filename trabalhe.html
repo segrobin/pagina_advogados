@@ -28,16 +28,15 @@
 
     <br/>
     <div id="curriculo_form">
-      
         <div id="title_curriculo_form"><h1>PREENCHA AS INFORMAÇÕES ABAIXO</h1></div>
         <!--Formulário-->
-        <form id="form_curriculo" action="#" method="POST">
-            <input type="text" name="nome_curriculo" id="nome_curriculo" class="input" placeholder="Nome">
-            <input type="number" name="cpf_curriculo" id="cpf_curriculo" class="input" placeholder="CPF">
-            <input type="email" name="email_curriculo" id="email_curriculo" class="input" placeholder="E-mail">
-            <input type="tel" name="telefone_curriculo" id="telefone_curriculo" class="input" placeholder="Telefone para contato">
-            <input type="text" name="cidade_curriculo" id="cidade_curriculo" class="input" placeholder="Sua cidade">
-            <input type="text" name="formacao_curriculo" id="formacao_curriculo" class="input" placeholder="Formação">
+        <form id="form_curriculo">
+            <input type="text" name="nome_curriculo" id="nome_curriculo" class="input" placeholder="Nome" required="true">
+            <input type="number" name="cpf_curriculo" id="cpf_curriculo" class="input" placeholder="CPF"required="true">
+            <input type="email" name="email_curriculo" id="email_contato" class="input" placeholder="E-mail"required="true">
+            <input type="tel" name="telefone_curriculo" id="telefone_curriculo" class="input" placeholder="Telefone para contato"required="true">
+            <input type="text" name="cidade_curriculo" id="cidade_curriculo" class="input" placeholder="Sua cidade"required="true">
+            <input type="text" name="formacao_curriculo" id="formacao_curriculo" class="input" placeholder="Formação"required="true">
             <!--Arquivo-->
             <div id="anexo_curriculo">
                 <p>Anexe seu currículo aqui:</p>

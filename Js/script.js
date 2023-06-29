@@ -1,104 +1,75 @@
-document.addEventListener("DOMContentLoaded", function() {
-  // Funcionalidade 1: Adicionar um evento de clique para exibir um alerta quando os botões "Clique aqui! Estamos online" forem clicados
-  var buttonContato = document.querySelectorAll(".button_contato button");
+// Função para validar e enviar o formulário
+function enviarFormulario(event) {
+  event.preventDefault(); // Impede o envio padrão do formulário
 
-  buttonContato.forEach(function(button) {
-    button.addEventListener("click", function() {
-      alert("Botão clicado!");
+  var form = event.target; // Captura o formulário atual
+
+  if (form.checkValidity() && validarEmail()) {
+    // Se o formulário e o campo de e-mail forem válidos
+    alert("O formulário foi enviado!");
+    form.reset(); // Limpa os campos do formulário
+  } else {
+    // Se o formulário for inválido, exibe mensagens de validação
+    form.reportValidity();
+  }
+}
+
+// Função para validar todos os campos obrigatórios
+function validarCamposObrigatorios(form) {
+  var campos = form.querySelectorAll('input[required], select[required], textarea[required]');
+
+  campos.forEach(function(campo) {
+    campo.addEventListener('input', function() {
+      campo.setCustomValidity('');
+    });
+
+    campo.addEventListener('invalid', function() {
+      if (campo.validity.valueMissing) {
+        campo.setCustomValidity('Este campo é obrigatório.');
+      } else {
+        campo.setCustomValidity('');
+      }
     });
   });
+}
 
-  // Funcionalidade 2: Validar o formulário antes de enviar
-  var form = document.getElementById("area_contatos");
-  var buttonEnviar = document.getElementById("button_contato_form");
+// Função para validar o campo de e-mail
+function validarEmail() {
+  var emailInput = document.getElementById('email_contato');
+  var email = emailInput.value;
 
-  buttonEnviar.addEventListener("click", function(event) {
-    event.preventDefault();
+  // Expressão regular para validar o formato do e-mail
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    var nome = document.getElementById("nome_contato").value;
-    var email = document.getElementById("email_contato").value;
-    var telefone = document.getElementById("telefone_contato").value;
-    var cidade = document.getElementById("cidade_contato").value;
-
-    if (nome === "" || email === "" || telefone === "" || cidade === "") {
-      alert("Por favor, preencha todos os campos do formulário.");
-    } else {
-      form.submit();
-      exibirMensagemConfirmacao();
-    }
-  });
-
-  function exibirMensagemConfirmacao() {
-    var mensagemConfirmacao = document.createElement("p");
-    mensagemConfirmacao.textContent = "Formulário enviado com sucesso!";
-
-    var areaContatos = document.getElementById("area_contatos");
-    areaContatos.appendChild(mensagemConfirmacao);
+  if (emailRegex.test(email)) {
+    return true; // E-mail válido
+  } else {
+    emailInput.setCustomValidity("Digite um endereço de e-mail válido.");
+    return false; // E-mail inválido
   }
+}
 
-  // Funcionalidade 3: Alterar a cor de fundo do cabeçalho quando o usuário rolar a página
-  var header = document.querySelector("header");
+// Captura todos os formulários da página
+var forms = document.querySelectorAll('form');
 
-  window.addEventListener("scroll", function() {
-    if (window.scrollY > 0) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  });
-
-  // Funcionalidade 4: Adicionar um evento de clique para exibir uma mensagem de confirmação ao clicar no link "Trabalhe conosco"
-  var linkTrabalheConosco = document.querySelector("#curriculo a");
-
-  linkTrabalheConosco.addEventListener("click", function(event) {
-    var confirmacao = confirm("Deseja enviar seu currículo?");
-
-    if (!confirmacao) {
-      event.preventDefault();
-    }
-  });
-
-  // Funcionalidade 5: Abrir janela pop-up ao passar o mouse sobre o advogado
-  var advogados = document.querySelectorAll(".advogado");
-
-  advogados.forEach(function(advogado) {
-    advogado.addEventListener("mouseover", function() {
-      var url = this.querySelector("a").getAttribute("href");
-      var popup = window.open(url, "advogadoPopup", "width=800,height=600");
-      popup.focus();
-    });
-  });
-
-  function validarFormulario() {
-    var nome = document.getElementById('nome_curriculo').value;
-    var cpf = document.getElementById('cpf_curriculo').value;
-    var email = document.getElementById('email_curriculo').value;
-    
-    // Verificar se os campos obrigatórios estão preenchidos
-    if (nome === '' || cpf === '' || email === '') {
-      alert('Por favor, preencha todos os campos obrigatórios.');
-      return false;
-    }
-    
-    // Validar o formato do e-mail utilizando expressão regular
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      alert('Por favor, insira um e-mail válido.');
-      return false;
-    }
-    
-    // Validar o formato do CPF utilizando expressão regular
-    var cpfRegex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
-    if (!cpfRegex.test(cpf)) {
-      alert('Por favor, insira um CPF válido no formato XXX.XXX.XXX-XX.');
-      return false;
-    }
-    
-    // Se todas as validações passaram, o formulário está correto
-    alert('Formulário válido. Enviando...');
-    return true;
-  }
+// Adiciona um evento de envio para cada formulário
+forms.forEach(function(form) {
+  form.addEventListener('submit', enviarFormulario);
+  validarCamposObrigatorios(form);
 });
+
+function exibirMensagem() {
+  alert("O botão foi pressionado!");
+}
+
+// Captura todos os botões de contato
+var buttons = document.querySelectorAll('.button_contato button');
+
+// Adiciona um evento de clique para cada botão
+buttons.forEach(function(button) {
+  button.addEventListener('click', exibirMensagem);
+});
+
 
 var lista = document.getElementById("span");
 

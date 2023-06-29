@@ -148,6 +148,7 @@ button {
     background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 a.noticia-link {
     color: #000000;
     text-decoration: none;
@@ -379,10 +380,23 @@ background-color: #ff0000;
     text-align: center;
 }
 
+#casos_resolvidos_sobre {
+    margin-left: 20px;
+}
+
 #bottom_sobre {
     display: flex;
-    gap: 40px;
+    gap: 20px;
     text-align: center;
+}
+
+#clientes_sobre {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#premios_sobre {
+    margin-top: 10px;
 }
 
 #linha_horizontal {
@@ -395,12 +409,14 @@ background-color: #ff0000;
     width: 5px;
     height: 200px;
     background-color: #ff0000;
+    margin-left: 50px;
 }
 
 #linha_vertical_bottom {
     width: 5px;
     height: 200px;
     background-color: #ff0000;
+    margin-left: 60px;
 }
 
 #voltar_inicio_sobre {
@@ -470,7 +486,7 @@ background-color: #ff0000;
 
 #maps {
     margin-bottom: 30px;
-    margin-left: 20px;
+    margin-left: 50px;
 }
 
 #button_trabalheconosco_contato {

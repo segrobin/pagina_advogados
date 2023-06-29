@@ -10,31 +10,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Funcionalidade 2: Validar o formulário antes de enviar
   var form = document.getElementById("area_contatos");
-var buttonEnviar = document.getElementById("button_contato_form");
+  var buttonEnviar = document.getElementById("button_contato_form");
 
-buttonEnviar.addEventListener("click", function(event) {
-  event.preventDefault();
+  buttonEnviar.addEventListener("click", function(event) {
+    event.preventDefault();
 
-  var nome = document.getElementById("nome_contato").value;
-  var email = document.getElementById("email_contato").value;
-  var telefone = document.getElementById("telefone_contato").value;
-  var cidade = document.getElementById("cidade_contato").value;
+    var nome = document.getElementById("nome_contato").value;
+    var email = document.getElementById("email_contato").value;
+    var telefone = document.getElementById("telefone_contato").value;
+    var cidade = document.getElementById("cidade_contato").value;
 
-  if (nome === "" || email === "" || telefone === "" || cidade === "") {
-    alert("Por favor, preencha todos os campos do formulário.");
-  } else {
-    form.submit();
-    exibirMensagemConfirmacao();
+    if (nome === "" || email === "" || telefone === "" || cidade === "") {
+      alert("Por favor, preencha todos os campos do formulário.");
+    } else {
+      form.submit();
+      exibirMensagemConfirmacao();
+    }
+  });
+
+  function exibirMensagemConfirmacao() {
+    var mensagemConfirmacao = document.createElement("p");
+    mensagemConfirmacao.textContent = "Formulário enviado com sucesso!";
+
+    var areaContatos = document.getElementById("area_contatos");
+    areaContatos.appendChild(mensagemConfirmacao);
   }
-});
-
-function exibirMensagemConfirmacao() {
-  var mensagemConfirmacao = document.createElement("p");
-  mensagemConfirmacao.textContent = "Formulário enviado com sucesso!";
-
-  var areaContatos = document.getElementById("area_contatos");
-  areaContatos.appendChild(mensagemConfirmacao);
-}
 
   // Funcionalidade 3: Alterar a cor de fundo do cabeçalho quando o usuário rolar a página
   var header = document.querySelector("header");
@@ -99,3 +99,13 @@ function exibirMensagemConfirmacao() {
     return true;
   }
 });
+
+var lista = document.getElementById("span");
+
+function expandirNoticias() {
+  lista.style.display = "block";
+}
+
+function esconderNoticias() {
+  lista.style.display = "none";
+}
